@@ -43,7 +43,7 @@ html{ scroll-behavior: smooth; }
   *,*::before,*::after{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
 }
 
-body{
+/* body{
   margin:0;
   background: var(--navy-deep);
   color: var(--paper);
@@ -51,7 +51,65 @@ body{
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+} */
+body{
+margin: 0;
+min-height: 100vh;
+
+/* Premium Industrial Gradient */
+background:
+radial-gradient(circle at top right,
+rgba(212,175,55,0.12) 0%,
+transparent 25%),
+radial-gradient(circle at bottom left,
+rgba(255,255,255,0.04) 0%,
+transparent 30%),
+linear-gradient(
+135deg,
+#07111f 0%,
+#0d1b2a 35%,
+#132238 65%,
+#1b2d45 100%
+);
+
+color: #f8fafc;
+
+font-family: "Inter", "Poppins", sans-serif;
+
+font-size: 16px;
+line-height: 1.7;
+font-weight: 400;
+
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+
+overflow-x: hidden;
+position: relative;
 }
+
+/* Luxury Background Pattern */
+body::before{
+content: "";
+position: fixed;
+inset: 0;
+
+background-image:
+linear-gradient(
+rgba(255,255,255,0.03) 1px,
+transparent 1px
+),
+linear-gradient(
+90deg,
+rgba(255,255,255,0.03) 1px,
+transparent 1px
+);
+
+background-size: 60px 60px;
+
+pointer-events: none;
+z-index: -1;
+}
+
 
 img{ max-width:100%; display:block; }
 a{ color: inherit; text-decoration:none; }
